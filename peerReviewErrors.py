@@ -16,12 +16,12 @@ def displayIntro():
 	print()
 
 def chooseCave():
-    cave = ''
+	cave = ''                                                                             ##cave = '' used spaces to indent rather than tab causing an inconsistancy in indentations
 	while cave != '1' and cave != '2':
 		print('Which cave will you go into? (1 or 2)')
 		cave = input()
 
-	return caves
+	return cave                                                                            #calling 'cave', make sure strings are identical.
 
 def checkCave(chosenCave):
 	print('You approach the cave...')
@@ -39,12 +39,12 @@ def checkCave(chosenCave):
 	if chosenCave == str(friendlyCave):
 		print('Gives you his treasure!')
 	else:
-		print 'Gobbles you down in one bite!'
+		print ('Gobbles you down in one bite!')                                                     #missing () arount print statement.
 
 playAgain = 'yes'
-while playAgain = 'yes' or playAgain = 'y':
+while playAgain == 'yes' or playAgain == 'y':                                                        #use "==" instead of "=" to check if a statement is true.
 	displayIntro()
-	caveNumber = choosecave()
+	caveNumber = chooseCave()                                                                        #case sensitive, choosCave() rather than choosecave, as definde in the function above.
 	checkCave(caveNumber)
     
 	print('Do you want to play again? (yes or no)')
